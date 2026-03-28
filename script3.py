@@ -137,3 +137,15 @@ else :
 '''Faça um algoritmo que solicite o salário fixo e o valor das vendas efetuadas pelo vendedor de uma 
 empresa. Sabendo-se que ele recebe uma comissão de 3% sobre o total de vendas até R$1500 mais
 5% sobre o que ultrapassar este valor, calcular e escrever o seu salário total.'''
+
+salario_fixo = float(input("Digite o salário: "))
+valor_vendas = float(input("Digite o valor das vendas: "))
+
+if valor_vendas <= 1500:
+    comissao = valor_vendas * (3/100)
+elif valor_vendas > 1500:
+    comissao = 1500 * (3/100) + (valor_vendas - 1500) * (5/100)
+
+salario_total = salario_fixo + comissao
+
+print(f"O salário total é {salario_total}")
